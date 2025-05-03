@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KomikKu - Baca Komik Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">KomikKu</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#komik">Daftar Komik</a></li>
+                    <li><a href="#terbaru">Terbaru</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Cari judul komik...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Baca Komik Favoritmu</h2>
+            <p>Gratis dan mudah diakses di semua perangkat</p>
+            <a href="#komik" class="btn">Mulai Baca</a>
+        </div>
+    </section>
+
+    <!-- Daftar Komik -->
+    <section class="komik-list" id="komik">
+        <div class="container">
+            <h2 class="section-title">Daftar Komik</h2>
+            <div class="komik-grid">
+                <!-- Item Komik 1 -->
+                <div class="komik-item">
+                    <img src="images/komik1.jpg" alt="Judul Komik 1">
+                    <h3>Judul Komik 1</h3>
+                    <p>Chapter 25</p>
+                    <a href="#" class="btn-small">Baca</a>
+                </div>
+                
+                <!-- Item Komik 2 -->
+                <div class="komik-item">
+                    <img src="images/komik2.jpg" alt="Judul Komik 2">
+                    <h3>Judul Komik 2</h3>
+                    <p>Chapter 18</p>
+                    <a href="#" class="btn-small">Baca</a>
+                </div>
+                
+                <!-- Tambahkan lebih banyak item komik di sini -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Komik Terbaru -->
+    <section class="terbaru" id="terbaru">
+        <div class="container">
+            <h2 class="section-title">Update Terbaru</h2>
+            <div class="update-list">
+                <!-- Update 1 -->
+                <div class="update-item">
+                    <img src="images/komik3.jpg" alt="Judul Komik 3">
+                    <div class="update-info">
+                        <h3>Judul Komik 3</h3>
+                        <p>Chapter 12 - 1 jam yang lalu</p>
+                        <a href="#" class="btn-small">Lanjut Baca</a>
+                    </div>
+                </div>
+                
+                <!-- Update 2 -->
+                <div class="update-item">
+                    <img src="images/komik4.jpg" alt="Judul Komik 4">
+                    <div class="update-info">
+                        <h3>Judul Komik 4</h3>
+                        <p>Chapter 7 - 3 jam yang lalu</p>
+                        <a href="#" class="btn-small">Lanjut Baca</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 KomikKu. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca Komik - KomikKu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Header sama seperti index.html -->
+    </header>
+
+    <section class="comic-reader">
+        <div class="container">
+            <h1 id="comic-title">Judul Komik</h1>
+            <div class="comic-controls">
+                <button id="prev-page"><i class="fas fa-arrow-left"></i> Sebelumnya</button>
+                <span id="page-indicator">Halaman 1 dari 5</span>
+                <button id="next-page">Selanjutnya <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="comic-container">
+                <img id="comic-page" src="images/komik/halaman1.jpg" alt="Halaman 1">
+            </div>
+        </div>
+        <div class="comic-rating">
+            <h3>Rating Komik</h3>
+            <div class="stars">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+            </div>
+            <p id="rating-text">Belum ada rating</p>
+        </div>
+        
+        <div class="comic-comments">
+            <h3>Komentar</h3>
+            <form id="comment-form">
+                <textarea placeholder="Tulis komentar..." required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <div id="comments-list">
+                <!-- Komentar akan muncul di sini -->
+            </div>
+        </div>  
+    </section>
+
+    <script src="js/comic-reader.js"></script>
+</body>
+</html>
