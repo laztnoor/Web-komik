@@ -1,0 +1,8 @@
+/comic-website/
+├── index.html          (Halaman utama)
+├── css/
+│   └── style.css       (CSS utama)
+├── js/
+│   └── script.js       (JavaScript utama)
+├── images/             (Folder untuk gambar komik)
+└── comics/             (Folder untuk halaman komik)

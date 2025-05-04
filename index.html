@@ -1,105 +1,187 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <!-- Meta untuk responsive dan karakter -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KomikKu - Baca Komik Online</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header/Navbar -->
-    <header>
+    <!-- Header/Navigasi -->
+    <header class="header">
         <div class="container">
-            <h1 class="logo">KomikKu</h1>
-            <nav>
+            <div class="logo">
+                <h1>KomikKu</h1>
+            </div>
+            
+            <!-- Navigasi Desktop -->
+            <nav class="nav-desktop">
                 <ul>
                     <li><a href="#home">Beranda</a></li>
-                    <li><a href="#komik">Daftar Komik</a></li>
-                    <li><a href="#terbaru">Terbaru</a></li>
-                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#comics">Komik</a></li>
+                    <li><a href="#genres">Genre</a></li>
+                    <li><a href="#about">Tentang</a></li>
                 </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </nav>
-        </div>
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Cari judul komik...">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
+
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Cari komik..." aria-label="Search comics">
+                    <button type="submit" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div id="search-results" class="search-results-dropdown"></div>
+            </div>
+
+            <!-- Di dalam <header class="header"> setelah search container -->
+<div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun" style="display: none;"></i>
+    </button>
+</div>
+            
+            <!-- Tombol Menu Mobile -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Navigasi Mobile -->
+            <nav class="nav-mobile">
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#comics">Komik</a></li>
+                    <li><a href="#genres">Genre</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="home" class="hero">
         <div class="container">
-            <h2>Baca Komik Favoritmu</h2>
-            <p>Gratis dan mudah diakses di semua perangkat</p>
-            <a href="#komik" class="btn">Mulai Baca</a>
-        </div>
-    </section>
-
-    <!-- Daftar Komik -->
-    <section class="komik-list" id="komik">
-        <div class="container">
-            <h2 class="section-title">Daftar Komik</h2>
-            <div class="komik-grid">
-                <!-- Item Komik 1 -->
-                <div class="komik-item">
-                    <img src="images/komik1.jpg" alt="Judul Komik 1">
-                    <h3>Judul Komik 1</h3>
-                    <p>Chapter 25</p>
-                    <a href="#" class="btn-small">Baca</a>
-                </div>
-                
-                <!-- Item Komik 2 -->
-                <div class="komik-item">
-                    <img src="images/komik2.jpg" alt="Judul Komik 2">
-                    <h3>Judul Komik 2</h3>
-                    <p>Chapter 18</p>
-                    <a href="#" class="btn-small">Baca</a>
-                </div>
-                
-                <!-- Tambahkan lebih banyak item komik di sini -->
+            <div class="hero-content">
+                <h2>Baca Komik Favoritmu Dimana Saja</h2>
+                <p>Temukan ribuan komik dari berbagai genre dan penikmat komik lainnya.</p>
+                <a href="#comics" class="btn">Jelajahi Sekarang</a>
             </div>
         </div>
     </section>
 
-    <!-- Komik Terbaru -->
-    <section class="terbaru" id="terbaru">
+    <!-- Daftar Komik Populer dengan Scroll Horizontal -->
+<section class="trending-comics">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Komik Populer</h2>
+            <div class="scroll-arrows">
+                <button class="scroll-arrow left-arrow" aria-label="Scroll left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="scroll-arrow right-arrow" aria-label="Scroll right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="trending-comics-container">
+            <div class="trending-comics-scroll">
+                <!-- Item komik akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Daftar Komik -->
+    <section id="comics" class="comics-section">
         <div class="container">
-            <h2 class="section-title">Update Terbaru</h2>
-            <div class="update-list">
-                <!-- Update 1 -->
-                <div class="update-item">
-                    <img src="images/komik3.jpg" alt="Judul Komik 3">
-                    <div class="update-info">
-                        <h3>Judul Komik 3</h3>
-                        <p>Chapter 12 - 1 jam yang lalu</p>
-                        <a href="#" class="btn-small">Lanjut Baca</a>
-                    </div>
-                </div>
-                
-                <!-- Update 2 -->
-                <div class="update-item">
-                    <img src="images/komik4.jpg" alt="Judul Komik 4">
-                    <div class="update-info">
-                        <h3>Judul Komik 4</h3>
-                        <p>Chapter 7 - 3 jam yang lalu</p>
-                        <a href="#" class="btn-small">Lanjut Baca</a>
-                    </div>
-                </div>
+            <h2 class="section-title">Komik Terbaru</h2>
+            
+            <!-- Filter Genre -->
+            <div class="genre-filter">
+                <button class="filter-btn active" data-genre="all">Semua</button>
+                <button class="filter-btn" data-genre="action">Action</button>
+                <button class="filter-btn" data-genre="romance">Romance</button>
+                <button class="filter-btn" data-genre="fantasy">Fantasy</button>
+                <button class="filter-btn" data-genre="comedy">Comedy</button>
+            </div>
+            
+            <!-- Grid Komik -->
+            <div class="comics-grid">
+                <!-- Item komik akan diisi oleh JavaScript -->
+            </div>
+            
+            <!-- Tombol Load More -->
+            <div class="load-more-container">
+                <button id="load-more" class="btn">Muat Lebih Banyak</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genre Section -->
+    <section id="genres" class="genres-section">
+        <div class="container">
+            <h2 class="section-title">Genre Populer</h2>
+            <div class="genres-grid">
+                <!-- Item genre akan diisi oleh JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 KomikKu. Semua hak dilindungi.</p>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Tentang KomikKu</h3>
+                    <p>KomikKu adalah platform untuk membaca komik online secara gratis dengan pengalaman terbaik di semua perangkat.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#comics">Komik</a></li>
+                        <li><a href="#genres">Genre</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> info@komikku.com</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 KomikKu | Dibuat dengan <i class="fas fa-heart"></i> untuk pecinta komik
         </div>
     </footer>
 
+    <!-- Modal untuk menampilkan komik -->
+    <div class="modal" id="comic-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Konten modal akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
